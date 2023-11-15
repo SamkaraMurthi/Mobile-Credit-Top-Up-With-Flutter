@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pulsa_login/main_page.dart';
 import 'package:pulsa_login/sign_up.dart';
 
 class login_page extends StatefulWidget {
@@ -155,8 +156,13 @@ class _login_pageState extends State<login_page> {
                             ),
                           ),
                           onPressed: () {
-                            // Add your button's functionality here
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return main_page();
+                            }));
                           },
+                          // above is Temporary Function
+
                           child: const Text(
                             'Login',
                             style: TextStyle(
