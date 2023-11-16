@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pulsa_login/main_page.dart' as colors;
 
 class home_page extends StatefulWidget {
   const home_page({super.key});
@@ -12,15 +11,57 @@ class _home_pageState extends State<home_page> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Column(
-      children: [
-        Container(
-          height: MediaQuery.of(context).size.height * 0.12,
-          decoration: BoxDecoration(
-            gradient: myColors.backgroundColor1,
+        child: Center(
+      child: Column(
+        children: [
+          Padding(
+              padding: EdgeInsets.only(
+            top: 50,
+          )),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.2,
+            width: MediaQuery.of(context).size.width * 0.95,
+            decoration: BoxDecoration(
+                gradient: myColors.backgroundColor1,
+                borderRadius: BorderRadius.circular(30)),
+            child: Column(
+              children: [
+                Padding(padding: EdgeInsets.only(top: 18)),
+                Container(
+                  child: Row(
+                    children: [
+                      Padding(padding: EdgeInsets.only(left: 30)),
+                      Icon(Icons.account_box_rounded),
+                      Spacer(
+                        flex: 1,
+                      ),
+                      Text(
+                        "Welcome, ",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "User",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(
+                        flex: 5,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(children: [
+                    Container(), // account ammount
+                    Container(), //account topup
+                  ]),
+                ),
+              ],
+            ),
           ),
-        )
-      ],
+        ],
+      ),
     ));
   }
 }
