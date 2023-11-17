@@ -40,7 +40,7 @@ class _main_pageState extends State<main_page> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          Color(0xFFfffffe), // Set the background color of the Scaffold
+          Color(0xFF273690), // Set the background color of the Scaffold
       body: _pages[_selectedIndex],
       bottomNavigationBar: ClipRRect(
         // Use ClipRRect to clip the circular border
